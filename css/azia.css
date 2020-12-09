@@ -37465,3 +37465,7 @@ body {
 
 .wd-100v {
   width: 100vw; }
+
+.card .card-dashboard-pageviews .remove-padding {
+  padding-left: 0 !important;;
+}
