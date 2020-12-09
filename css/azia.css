@@ -9276,7 +9276,7 @@ body {
           height: 2px; } }
   @media (min-width: 992px) {
     .az-header-menu .nav-item.show::before {
-      display: block; } }
+      display: hidden; } }
   .az-header-menu .nav-item.show .az-menu-sub {
     display: block; }
 
