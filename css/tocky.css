@@ -1,0 +1,73 @@
+/* body * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+} */
+
+.tocky-base {
+    max-width: 1085px;
+    padding: 6px;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    background-color: white;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(20, 17.5px);
+    grid-template-rows: repeat(3, 49px);
+    grid-gap: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.keytocky {
+    margin: 0px 5px;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    grid-column: span 2;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 7px;
+    color: #ffffff;
+}
+
+.tocky-header {
+    max-width: 1085px;
+    max-height: 40px;
+    padding: 6px 6px 0px 6px;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    background-color: white;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(20, 17.5px);
+    grid-template-rows: repeat(1, 55px);
+    grid-gap: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.headerkey {
+    max-height: 30px;
+    margin: 5px;
+    background-color: gray;
+    border-radius: 5px;
+    grid-column: span 20;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 7px;
+    color: #ffffff;
+}
+
+.key:hover {
+  border: 1px solid #eeeeee;
+  
+}
+
+.none {
+    opacity: 00;
+}
+
