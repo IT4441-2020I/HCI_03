@@ -6,17 +6,18 @@
 } */
 
 .keyboard-base {
-    max-width: 1085px;
-    padding: 20px;
-    position: absolute;
+    max-width: 646px;
+    padding: 10px;
+    /* position: static;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgb(197, 197, 197);
+    left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    margin-left: 4px;
+    background-color: white;
     border-radius: 10px;
     display: grid;
-    grid-template-columns: repeat(30, 30px);
-    grid-template-rows: repeat(5, 60px);
+    grid-template-columns: repeat(30, 16px);
+    grid-template-rows: repeat(5, 35px);
     grid-gap: 5px;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -27,9 +28,9 @@
     border: 2px solid black;
     border-radius: 5px;
     grid-column: span 2;
-    font-size: 20px;
+    font-size: 10px;
     text-align: center;
-    padding-top: 17px;
+    padding-top: 10px;
 }
 
 .key:hover {
