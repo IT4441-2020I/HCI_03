@@ -1,0 +1,20 @@
+.dictionary-wrap {
+    margin-top: 20px;
+}
+
+.box-wrap {
+    margin-top: 5px;
+    display: flex;
+}
+
+.dictionary-box{
+    resize: none;
+}
+
+.label-wrap {
+    display: flex;
+}
+
+.label1 {
+    width: 50.25%;
+}
