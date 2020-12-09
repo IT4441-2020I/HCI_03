@@ -15,21 +15,23 @@
     background-color: rgb(197, 197, 197);
     border-radius: 10px;
     display: grid;
-    grid-template-columns: repeat(30, 30px);
-    grid-template-rows: repeat(5, 60px);
+    grid-template-columns: repeat(20, 35px);
+    grid-template-rows: repeat(3, 70px);
     grid-gap: 5px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 
 .key {
-    background-color: rgb(243, 243, 243);
+    margin: 5px;
+    background-color: black;
     border: 2px solid black;
     border-radius: 5px;
     grid-column: span 2;
     font-size: 20px;
     text-align: center;
     padding-top: 17px;
+    color: #ffffff;
 }
 
 .key:hover {
@@ -37,48 +39,6 @@
   
 }
 
-.delete {
-    grid-column: span 4;
-}
-
-.tab {
-    grid-column: span 3;
-}
-
-.backslash {
-    grid-column: span 3;
-}
-
-.capslock {
-    grid-column: span 4;
-}
-
-.return {
-    grid-column: span 4;
-}
-
-.leftshift {
-    grid-column: span 5;
-}
-
-.rightshift {
-    grid-column: span 5;
-}
-
-.leftctrl {
-    grid-column: span 3;
-}
-
-.command {
-    grid-column: span 3;
-    font-size: 14px;
-}
-
-.space {
-    grid-column: span 13;
-}
-
-.highlight {
-    background-color: #707070;
-    color: #ffffff;
+.none {
+    opacity: 00;
 }
