@@ -11,6 +11,7 @@
 
 .blue {
     background-color:#3498db;
+    min-height: 100vh;
 }
 
 .sign-in{
@@ -35,9 +36,104 @@
 
 
 *{
-    font-family: 'Quicksand', sans-serif !important;
+    /* font-family: 'Quicksand', sans-serif !important; */
+    font-family: "Roboto", sans-serif;
 }
 
 .pad-left {
     padding-left: 50px;
+}
+.az-profile_button{
+    display: flex;
+}
+.profile_button{
+    padding: 6px 10px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+.profile_button a:hover{
+    text-decoration: none;
+    /* filter: brightness(90%); */
+} 
+#signin:hover{
+    background-color: #ccc;
+}
+#singup:hover{
+    background-color: #2980b9;
+} 
+
+#signin{
+    color:#2980b9;
+    margin-right: 10px;
+    border: 1px solid #2980b9;
+}
+#singup{
+    color: #fff !important;
+    background-color: #3498db;    
+    border: 1px solid #3498db;
+}
+
+#signin a{
+    color:#2980b9;
+}
+#singup a{
+    color: #fff;
+
+}
+.az-menu-sub .container{
+    padding: 0;
+
+}
+.az-menu-sub .container .nav-link{
+    font-size: 14px;
+    
+}
+.az-header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+
+}
+/* .header{
+    position: relative;
+} */
+@media (min-width: 1200px){
+    .az-header .container {
+        /* width: 1184px; */
+    }
+}
+#home{
+    height: 100vh;
+}
+#moreinfor{
+    position: absolute;
+    bottom: 197px;
+    color: #FFF;
+    left: 310px;
+    font-size: 28px;
+    font-weight: 500;
+    font-style: normal;
+    /* border-radius: 8px; */
+    /* border: 1px solid #2980b9; */
+    background-color: #3498db;
+    padding: 20px;
+    /* opacity: 0.5; */
+    display: none;
+}
+#moreinfor p{
+    color: #FFF;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    line-height: 40px !important;
+    margin: 0 !important;
+}
+.image_main{
+    transition: .5s ease;
+}
+.wrap_image:hover .image_main{
+    opacity: 0.6;
+}
+.wrap_image:hover a #moreinfor{
+    opacity: 1 !important;
+    display: block;
 }
