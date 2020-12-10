@@ -46,10 +46,10 @@
 
     <!-- azia CSS -->
     <link rel="stylesheet" href="../css/azia.css">
-
+    <link rel="stylesheet" href="../css/keyboard.css">
+    <link rel="stylesheet" href="../css/tocky.css">
   </head>
   <body>
-
     <div class="az-header">
       <div class="container">
         <div class="az-header-left">
@@ -67,15 +67,21 @@
             </li>
             <li class="nav-item active show">
               <a href="" class="nav-link with-sub"><i class="typcn typcn-document"></i> Học gõ tốc ký</a>
-              <nav class="az-menu-sub">
-                <a href="type-key.html" class="nav-link">Học gõ phím</a>
-                <a href="type-rhythm-first.html" class="nav-link">Học gõ âm tiết</a>
-                <a href="word-main.html" class="nav-link">Học gõ từ </a>
-                <a href="type-sentence.html" class="nav-link">Học gõ câu</a>
-              </nav>
+              <div class="az-menu-sub">
+                <div class="container">
+                  <div>
+                    <nav class="nav">
+                      <a href="type-key.html" class="nav-link">Học gõ phím</a>
+                      <a href="type-rhythm-first.html" class="nav-link">Học gõ âm tiết</a>
+                      <a href="word-main.html" class="nav-link">Học gõ từ </a>
+                      <a href="type-sentence.html" class="nav-link">Học gõ câu</a>
+                    </nav>
+                  </div>
+                </div><!-- container -->
+              </div>
             </li>
             <li class="nav-item">
-              <a href="chart-chartjs.html" class="nav-link"><i class="typcn typcn-chart-bar-outline"></i> Tốc ký</a>
+              <a href="tocky.html" class="nav-link"><i class="typcn typcn-chart-bar-outline"></i> Tốc ký</a>
             </li>
             <li class="nav-item">
               <a href="form-elements.html" class="nav-link"><i class="typcn typcn-chart-bar-outline"></i> Trò chơi</a>
@@ -86,7 +92,7 @@
                 <div class="container">
                   <div>
                     <nav class="nav">
-                      <a href="elem-buttons.html" class="nav-link">Từ điển</a>
+                      <a href="dictionary.html" class="nav-link">Từ điển</a>
                       <a href="https://drive.google.com/file/d/1GWzQTxJ0-HwLyERvmiBBUso_rYQc4GxA" target="_blank" class="nav-link">Tài liệu</a>
                     </nav>
                   </div>
@@ -151,9 +157,9 @@
                 <h6>Aziana Pechon</h6>
               </div><!-- az-header-profile -->
 
-              <a href="" class="dropdown-item"><i class="typcn typcn-user-outline"></i> Thông tin tài khoản</a>
-              <a href="" class="dropdown-item"><i class="typcn typcn-cog-outline"></i> Cài đặt tài khoản</a>
-              <a href="page-signin.html" class="dropdown-item"><i class="typcn typcn-power-outline"></i> Đăng xuất</a>
+              <a href="profile-user.html" class="dropdown-item"><i class="typcn typcn-user-outline"></i> Thông tin tài khoản</a>
+              <a href="profile-user.html" class="dropdown-item"><i class="typcn typcn-cog-outline"></i> Cài đặt tài khoản</a>
+              <a href="homepage.html" class="dropdown-item"><i class="typcn typcn-power-outline"></i> Đăng xuất</a>
             </div><!-- dropdown-menu -->
           </div>
         </div><!-- az-header-right -->
@@ -196,81 +202,122 @@
             <span>Học gõ âm tiết</span>
             <span>Âm đầu</span>
           </div>
-          <h2 class="az-content-title">ChartJS Charts</h2>
-
-          <div class="az-content-label mg-b-5">Bar Chart</div>
-          <p class="mg-b-20">Below is the basic bar chart example.</p>
-
-          <div class="row row-sm">
-            <div class="col-sm-8 col-md-6 col-xl-4">
-              <div class="az-content-label az-content-label-sm mg-b-15">Solid Color</div>
-              <div class="ht-200 ht-lg-250"><canvas id="chartBar1"></canvas></div>
-            </div><!-- col-6 -->
-            <div class="col-sm-8 col-md-6 col-xl-4 mg-t-20 mg-md-t-0">
-              <div class="az-content-label az-content-label-sm mg-b-15">With Transparency</div>
-              <div class="ht-200 ht-lg-250"><canvas id="chartBar2"></canvas></div>
-            </div><!-- col-6 -->
-            <div class="col-sm-8 col-md-6 col-xl-4 mg-t-20 mg-xl-t-0">
-              <div class="az-content-label az-content-label-sm mg-b-15">Using Gradient Color</div>
-              <div class="ht-200 ht-lg-250"><canvas id="chartBar3"></canvas></div>
-            </div><!-- col-6 -->
-          </div><!-- row -->
-
-          <hr class="mg-y-30">
-
-          <div class="az-content-label mg-b-5">Horizontal Bar Chart</div>
-          <p class="mg-b-20">Below is the horizontal bar chart example.</p>
-
-          <div class="row row-sm">
-            <div class="col-sm-8 col-md-6">
-              <div class="chartjs-wrapper-demo"><canvas id="chartBar4"></canvas></div>
-            </div><!-- col-6 -->
-            <div class="col-sm-8 col-md-6 mg-t-20 mg-md-t-0">
-              <div class="chartjs-wrapper-demo"><canvas id="chartBar5"></canvas></div>
-            </div><!-- col-6 -->
-          </div><!-- row -->
-
-          <hr class="mg-y-30">
-
-          <div class="az-content-label mg-b-5">Stacked Bar Chart</div>
-          <p class="mg-b-20">Below are the vertical and horizontal bar chart example.</p>
-
-          <div class="row row-sm">
-            <div class="col-sm-8 col-md-6">
-              <div class="chartjs-wrapper-demo"><canvas id="chartStacked1"></canvas></div>
-            </div><!-- col-6 -->
-            <div class="col-sm-8 col-md-6 mg-t-20 mg-md-t-0">
-              <div class="chartjs-wrapper-demo"><canvas id="chartStacked2"></canvas></div>
-            </div><!-- col-6 -->
-          </div><!-- row -->
-
-          <hr class="mg-y-30">
-
-          <div class="row row-sm">
-            <div class="col-sm-8 col-md-6">
-              <div class="az-content-label mg-b-5">Line Chart</div>
-              <p class="mg-b-20">Below is the basic line chart example.</p>
-              <div class="chartjs-wrapper-demo"><canvas id="chartLine1"></canvas></div>
-            </div><!-- col-6 -->
-            <div class="col-sm-8 col-md-6 mg-t-20 mg-md-t-0">
-              <div class="az-content-label mg-b-5">Area Chart</div>
-              <p class="mg-b-20">Below is the basic area chart example.</p>
-              <div class="chartjs-wrapper-demo"><canvas id="chartArea1"></canvas></div>
-            </div><!-- col-6 -->
-          </div><!-- row -->
-
-          <hr class="mg-y-30">
-
-          <div class="az-content-label mg-b-5">Pie &amp; Donut Chart</div>
-          <p class="mg-b-20">Below are an example of data in a pie and donut chart.</p>
-
-          <div class="d-md-flex">
-            <div class="chartjs-wrapper-demo mg-b-20 mg-md-b-0 mg-md-r-30 mg-xl-r-40"><canvas id="chartPie"></canvas></div>
-            <div class="chartjs-wrapper-demo"><canvas id="chartDonut"></canvas></div>
+          <h2 class="az-content-title" style="margin-bottom: 0px;">Danh sách bài học</h2>
+          <div class="row" style="margin: 20px;">
+            <a href="type-rhythm-first.html?key=tk"><button style="margin: 5px;" id="btk">NH</button></a>
+            <a href="type-rhythm-first.html?key=sr"><button style="margin: 5px;" id="bsr">L</button></a>
+            <a href="type-rhythm-first.html?key=h"><button style="margin: 5px;" id="bh">H</button></a>
           </div>
-
-          <div class="ht-40"></div>
-
+          <div class="az-content-label mg-b-5">Gõ âm đầu</div>
+          <p class="mg-b-20">Chọn âm đầu ở trên và gõ theo gợi ý trên bàn phím</p>
+          
+          <div class="card card-dashboard-one" style="width: 655px; margin-bottom: 20px; align-self: center;">
+            <div class="keyboard-base">
+              <div class="key">~</div>
+              <div class="key">1</div>
+              <div class="key">2</div>
+              <div class="key">3</div>
+              <div class="key">4</div>
+              <div class="key">5</div>
+              <div class="key">6</div>
+              <div class="key">7</div>
+              <div class="key">8</div>
+              <div class="key">9</div>
+              <div class="key">0</div>
+              <div class="key">-</div>
+              <div class="key">+</div>
+              <div class="key delete">Backspace</div>
+              <div class="key tab">Tab</div>
+              <div class="key highlight" id="k1s">S</div>
+              <div class="key highlight" id="k1k">K</div>
+              <div class="key highlight" id="k1r">R</div>
+              <div class="key highlight">N</div>
+              <div class="key highlight">H</div>
+              <div class="key">Y</div>
+              <div class="key highlight">*</div>
+              <div class="key highlight" id="k1w">W</div>
+              <div class="key highlight">J</div>
+              <div class="key highlight">N</div>
+              <div class="key highlight">T</div>
+              <div class="key">[</div>
+              <div class="key backslash">\</div>
+              <div class="key capslock">CapsLock</div>
+              <div class="key highlight" id="k1t">T</div>
+              <div class="key highlight">P</div>
+              <div class="key highlight" id="k1h">H</div>
+              <div class="key highlight">N</div>
+              <div class="key highlight">S</div>
+              <div class="key">H</div>
+              <div class="key highlight" id="k1i">I</div>
+              <div class="key highlight">Y</div>
+              <div class="key highlight">J</div>
+              <div class="key highlight">G</div>
+              <div class="key highlight">K</div>
+              <div class="key return">Enter</div>
+              <div class="key leftshift">Shift</div>
+              <div class="key">Z</div>
+              <div class="key">X</div>
+              <div class="key highlight">U</div>
+              <div class="key highlight">O</div>
+              <div class="key">B</div>
+              <div class="key highlight">E</div>
+              <div class="key highlight">A</div>
+              <div class="key">,</div>
+              <div class="key">.</div>
+              <div class="key">/</div>
+              <div class="key rightshift">Shift</div>
+              <div class="key leftctrl">Ctrl</div>
+              <div class="key">Win</div>
+              <div class="key command">Alt</div>
+              <div class="key space">Space</div>
+              <div class="key command">Alt</div>
+              <div class="key">Win</div>
+              <div class="key">Menu</div>
+              <div class="key">Ctrl</div>
+            </div>
+          </div><!-- card -->
+      
+          <div class="card card-dashboard-two" style="width: 460px; margin-bottom: 20px ;align-self: center;">
+            <div class="card-body">
+              <div class="tocky-header">
+                <div class="headerkey"></div>
+              </div>
+              <div class="tocky-base">
+                <div class="keytocky" id="k2s">S</div>
+                <div class="keytocky" id="k2k">K</div>
+                <div class="keytocky" id="k2r">R</div>
+                <div class="keytocky">N</div>
+                <div class="keytocky">H</div>
+                <div class="keytocky">*</div>
+                <div class="keytocky" id="k2w">W</div>
+                <div class="keytocky">J</div>
+                <div class="keytocky">N</div>
+                <div class="keytocky">T</div>
+        
+                <div class="keytocky" id="k2t">T</div>
+                <div class="keytocky">P</div>
+                <div class="keytocky" id="k2h">H</div>
+                <div class="keytocky">N</div>
+                <div class="keytocky">S</div>
+                <div class="keytocky" id="k2i">I</div>
+                <div class="keytocky">Y</div>
+                <div class="keytocky">J</div>
+                <div class="keytocky">G</div>
+                <div class="keytocky">K</div>
+                
+                <div class="keytocky none"></div>
+                <div class="keytocky none"></div>
+                <div class="keytocky none"></div>
+                <div class="keytocky">U</div>
+                <div class="keytocky">O</div>
+                <div class="keytocky">E</div>
+                <div class="keytocky">A</div>
+                <div class="keytocky none"></div>
+                <div class="keytocky none"></div>
+                <div class="keytocky none"></div>
+              </div>
+            </div><!-- card -->
+          </div>
           <div class="az-footer mg-t-auto">
             <div class="container">
               <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © HCI03</span>
@@ -280,7 +327,15 @@
       </div><!-- container -->
     </div><!-- az-content -->
 
-
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const myParam = urlParams.get('key');
+      document.getElementById("b"+myParam).style.backgroundColor = "#5b47fb";
+      for(var i=0; i<myParam.length; i++) {
+        document.getElementById("k1"+myParam[i]).style.backgroundColor = "red"
+        document.getElementById("k2"+myParam[i]).style.backgroundColor = "red"
+      }
+    </script>
     <script src="../lib/jquery/jquery.min.js"></script>
     <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../lib/ionicons/ionicons.js"></script>
