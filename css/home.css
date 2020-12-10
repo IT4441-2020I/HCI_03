@@ -137,3 +137,44 @@
     opacity: 1 !important;
     display: block;
 }
+#wrap_01:hover .image_01{
+    opacity: 0.6;
+}
+#wrap_01:hover .text_01{
+    display: block;
+}
+#wrap_01{
+    position: relative;
+}
+.text_01{
+    position: absolute;
+    font-size: 20px;
+    font-weight: 600;
+    top: 125px;
+    left: 200px;
+    color: #FFF;
+    padding: 10px;
+    background-color: #3498db;
+    display: none;
+}
+
+.wrap_02:hover .image_02{
+    opacity: 0.6;
+}
+.wrap_02:hover .text_02{
+    display: block;
+}
+.wrap_02{
+    position: relative;
+}
+.text_02{
+    position: absolute;
+    font-size: 20px;
+    font-weight: 600;
+    top: 197px;
+    left: 175px;
+    color: #FFF;
+    padding: 10px;
+    background-color: #3498db;
+    display: none;
+}
