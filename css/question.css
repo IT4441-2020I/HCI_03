@@ -1,0 +1,96 @@
+.word-box {
+    font-size: 20px;
+    width: 500px;
+    height: 50px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    padding: 10px;
+    overflow-y: hidden;
+    border: 1px solid  #d3d3d3; 
+}
+
+.ans1 {
+    margin-top: 20px;
+    width: 200px;
+    height: 70px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+}
+
+.word-box p {
+    display: inline;
+}
+
+.success {
+    color: #008000;
+}
+
+.fail {
+    color :#ff0000;
+}
+
+.type-box {
+    margin-top: 5px;
+    border-radius: 5px;
+    width: 650px;
+    height: 35px;
+    font-size: 20px;
+}
+
+.refresh-btn {
+    margin-left: 10px;
+    margin-top: 4px;
+    width: 38px;
+    height: 35px;
+    background-color: #5b47fb;
+    border: 1px solid  #4e36ff;
+    border-radius: 3px;
+}
+
+.test {
+    font-weight: 600;
+}
+
+.time-bar {
+    width: 700px;
+    display: flex;
+}
+
+.pgbar{
+    height: 20px;
+    border-radius: 4px;
+}
+
+.bg-purple {
+    background-color: #5b47fb;
+}
+
+.bg-blue {
+    background-color: #3498db;
+}
+
+.right-side {
+    display: flex;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 1px solid #dadcdf;
+}
+
+.badge-size {
+    margin-top: -10px;
+    padding: 10px;
+}
+
+.wrap {
+    display: flex;
+    height: 80vh;
+}
+
+.center {
+    margin-top: 24;
+    text-align: center;
+    font-size: 18px;
+}
