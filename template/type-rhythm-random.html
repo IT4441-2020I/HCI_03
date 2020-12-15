@@ -189,10 +189,7 @@
               <a href="word-full.html" class="nav-link">Từ âm đầu + âm chính + âm cuối</a>
               <a href="word-random.html" class="nav-link">Từ bất kỳ</a>
             </nav>
-            <label>Học gõ câu</label>
-            <nav class="nav flex-column">
-              <a href="type-sentence.html" class="nav-link">Học gõ câu</a>
-            </nav>
+            
           </div><!-- component-item -->
 
         </div><!-- az-content-left -->
@@ -202,14 +199,16 @@
             <span>Học gõ âm tiết</span>
             <span>Lẫn âm</span>
           </div>
-          <h2 class="az-content-title" style="margin-bottom: 0px;">Danh sách bài học</h2>
-          <div class="row" style="margin: 20px;">
-            <a href="type-rhythm-random.html?key=hya"><button style="margin: 5px;" id="bhya">ÒE</button></a>
-            <a href="type-rhythm-random.html?key=si"><button style="margin: 5px;" id="bsi">Ý</button></a>
-            <a href="type-rhythm-random.html?key=hsei"><button style="margin: 5px;" id="bhsei">ỈA</button></a>
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="az-content-label mg-b-5">Gõ âm xáo trộn <strong>ỎE</strong></div>
+              <p class="mg-b-20">Chọn âm xáo trộn ở trên và gõ theo gợi ý trên bàn phím</p>
+            </div>
+            <div class="col-sm-4">
+              <button type="button" class="btn btn-secondary" disabled>Học lại</button>
+              <button type="button" class="btn btn-success">Kiểm Tra</button>
+            </div>
           </div>
-          <div class="az-content-label mg-b-5">Gõ âm tiết bất kỳ</div>
-          <p class="mg-b-20">Chọn âm tiết ở trên và gõ theo gợi ý trên bàn phím</p>
           
           <div class="card card-dashboard-one" style="width: 655px; margin-bottom: 20px; align-self: center;">
             <div class="keyboard-base">
@@ -324,13 +323,27 @@
             </div><!-- container -->
           </div><!-- az-footer -->
         </div><!-- az-content-body -->
+        <div class="az-content-left ml-4">
+					<div class="component-item">
+						<h2 class="az-content-title" style="margin-bottom: 20px">Danh sách bài học</h2>
+						<div class="list-group" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action active" id="bhya" data-bs-toggle="list" href="type-rhythm-random.html?key=hya" role="tab" aria-controls="home"><input class="form-check-input me-1" type="checkbox" value="">Phím <button style="margin: 5px">ÒE</button></a>
+              <a class="list-group-item list-group-item-action" id="bsi" data-bs-toggle="list" href="type-rhythm-random.html?key=si" role="tab" aria-controls="profile"><input class="form-check-input me-1" type="checkbox" value="">Phím <button style="margin: 5px">Ý</button></a>
+              <a class="list-group-item list-group-item-action" id="bhsei" data-bs-toggle="list" href="type-rhythm-random.html?key=hsei" role="tab" aria-controls="messages"><input class="form-check-input me-1" type="checkbox" value="">Phím <button style="margin: 5px">ỈA</button></a>
+            </div>
+					</div>
+					<!-- component-item -->
+				</div>
       </div><!-- container -->
     </div><!-- az-content -->
 
     <script>
       const urlParams = new URLSearchParams(window.location.search);
       const myParam = urlParams.get('key');
-      document.getElementById("b"+myParam).style.backgroundColor = "#5b47fb";
+      document.getElementsByClassName("list-group-item list-group-item-action")[0].classList.remove("active");
+      document.getElementsByClassName("list-group-item list-group-item-action")[1].classList.remove("active");
+      document.getElementsByClassName("list-group-item list-group-item-action")[2].classList.remove("active");
+			document.getElementById('b' + myParam).classList.add("active");
       for(var i=0; i<myParam.length; i++) {
         document.getElementById("k1"+myParam[i]).style.backgroundColor = "red"
         document.getElementById("k2"+myParam[i]).style.backgroundColor = "red"
