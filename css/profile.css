@@ -1,6 +1,6 @@
 @media  (min-width: 1440px){
     .az-content .container{
-        min-width: 1200px;
+        min-width: 1400px;
     }
 }
 .flex{
@@ -8,6 +8,9 @@
 }
 .space_between{
     justify-content: space-between;
+}
+.space_around{
+    justify-content: space-around;
 }
 .V_center{
     align-items: center;
@@ -185,12 +188,37 @@
     border-bottom: 1px solid #ccc;
     margin-bottom: 30px;
 }
-.card-item .card-title{
-    
+.card-item {
+    margin-bottom: 30px;
 }
 .card-item_des {
-    text-align: center;
+    /* text-align: center; */
     font-size: 18px;
     font-weight: 500;
     margin: 20px 0;
+}
+.chart_wrap_sm{
+    /* border: 1px solid #ccc; */
+    padding: 10px;
+    width: fit-content;
+    text-align: center;
+}
+.chart_wrap_sm .chart_title{
+    font-size: 20px;
+    font-weight: 500;
+}
+.chart_title{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.chart_wrap_big{
+    padding: 10px;
+    width: fit-content;
+    text-align: center;
+    margin: auto;    
+}
+.chart_wrap_big .chart_title{
+    font-size: 24px;
+    font-weight: 500;
 }
