@@ -74,8 +74,8 @@
                   <div>
                     <nav class="nav">
                       <a href="type-key.html" class="nav-link">Học gõ phím</a>
-                      <a href="type-rhythm-first.html?key=tk"" class="nav-link">Học gõ âm tiết</a>
-                      <a href="word-main.html?key=he" class="nav-link">Học gõ từ </a>
+                      <a href="type-rhythm-first.html" class="nav-link">Học gõ âm tiết</a>
+                      <a href="word-main.html" class="nav-link">Học gõ từ </a>
                       <a href="type-sentence.html" class="nav-link">Học gõ câu</a>
                     </nav>
                   </div>
@@ -187,8 +187,8 @@
           <div class="component-item">
             <label>Làm quen bàn phím</label>
             <nav class="nav flex-column">
-              <a href="1key.html" class="nav-link active">Gõ 1 phím</a>
-              <a href="2key.html" class="nav-link ">Gõ kết hợp 2 phím</a>
+              <a href="1key.html" class="nav-link">Gõ 1 phím</a>
+              <a href="2key.html" class="nav-link active">Gõ kết hợp 2 phím</a>
               <a href="3key.html" class="nav-link ">Gõ kết hợp 3 phím</a>
               <a href="4key.html" class="nav-link ">Gõ kết hợp 4 phím</a>
               <a href="5key.html" class="nav-link ">Gõ kết hợp 5 phím</a>
@@ -220,14 +220,21 @@
           <div class="az-content-breadcrumb">
             <span>Luyện tập</span>
             <span>Làm quen bàn phím</span>
-            <span>Gõ 1 phím</span>
+            <span>Gõ 2 phím</span>
           </div>
-          <h2 class="az-content-title" style="margin-bottom: 0px;">Gõ 1 phím</h2>
+          <h2 class="az-content-title" style="margin-bottom: 0px;">Gõ 2 phím</h2>
+
           <div class="row" style="margin: 20px;">
-            <a href="1key.html?key=w"><button style="margin: 5px;" id="bw">W</button></a>
-            <a href="1key.html?key=t"><button style="margin: 5px;" id="bt">T</button></a>
-            <a href="1key.html?key=i"><button style="margin: 5px;" id="bi">I</button></a>
+            <a href="2key.html?key=wt"><button style="margin: 5px;" id="bwt1">W</button></a>
+            <a href="2key.html?key=wt"><button style="margin: 5px 10px 5px 0px;" id="bwt2">T</button></a>
+
+            <a href="2key.html?key=ik"><button style="margin: 5px;" id="bik1">I</button></a>
+            <a href="2key.html?key=ik"><button style="margin: 5px 10px 5px 0px;" id="bik2">K</button></a>
+            
+            <a href="2key.html?key=vn"><button style="margin: 5px;" id="bvn1">V</button></a>
+            <a href="2key.html?key=vn"><button style="margin: 5px 10px 5px 0px;" id="bvn2">N</button></a>
           </div>
+
           <div class="az-content-label mg-b-5">Gõ từng phím</div>
 
           <div class="row" style="margin-left: 0px;">
@@ -386,17 +393,22 @@
         const urlParams = new URLSearchParams(window.location.search);
         let myParam = urlParams.get('key');
         if (!myParam) {
-          myParam = "w";
+            myParam = "wt";
         }
 
-        document.getElementById("b"+myParam).style.backgroundColor = "#5b47fb"
-  
+        const myParam0 = myParam[0];
+        const myParam1 = myParam[1];
+
+
+        document.getElementById("b"+myParam+"1").style.backgroundColor = "#5b47fb"
+        document.getElementById("b"+myParam+"2").style.backgroundColor = "#5b47fb"
+
         function showSuggest (myParam) {
-            const keyboardOriginEvent = document.getElementById(myParam);
+            let keyboardOriginEvent = document.getElementById(myParam);
             if (myParam && mapKeyboard[myParam]) {
-              const keyNameMirror = mapKeyboard[myParam] + "-tk";
+              let keyNameMirror = mapKeyboard[myParam] + "-tk";
               // do not alert when only Control key is pressed.
-              const keyboardMirrorEvent = document.getElementById(keyNameMirror);
+              let keyboardMirrorEvent = document.getElementById(keyNameMirror);
               keyboardOriginEvent.style.backgroundColor = backGroundColorAfterClick;
               keyboardOriginEvent.style.color = color;
               // keyboardOriginEvent.classList.add("transform-active");
@@ -412,11 +424,11 @@
         }
 
         function closeSuggest (myParam) {
-            const keyboardOriginEvent = document.getElementById(myParam);
+            let keyboardOriginEvent = document.getElementById(myParam);
             if (myParam && mapKeyboard[myParam]) {
-              const keyNameMirror = mapKeyboard[myParam] + "-tk";
+              let keyNameMirror = mapKeyboard[myParam] + "-tk";
               // do not alert when only Control key is pressed.
-              const keyboardMirrorEvent = document.getElementById(keyNameMirror);
+              let keyboardMirrorEvent = document.getElementById(keyNameMirror);
               keyboardOriginEvent.style.backgroundColor = "";
               keyboardOriginEvent.style.color = "";
               // keyboardOriginEvent.classList.remove("transform-active");
@@ -431,25 +443,27 @@
             }
         }
 
-        showSuggest(myParam);
+        console.log("********************************************", myParam);
+        showSuggest(myParam0);
+        showSuggest(myParam1);
         function suggest() {
             let btnObject = document.getElementById("suggest_btn");
             let text = btnObject.innerText;
 
-            const urlParams = new URLSearchParams(window.location.search);
-            const myParam = urlParams.get('key');
 
             if (text === "Bật gợi ý") {
               btnObject.innerText = "Tắt gợi ý";
               btnObject.style.backgroundColor = "gray";
 
-              closeSuggest(myParam);
+              closeSuggest(myParam0);
+              closeSuggest(myParam1);
             }
             else {
               btnObject.innerText = "Bật gợi ý";
               btnObject.style.backgroundColor = "#007bff";
 
-              showSuggest(myParam);
+              showSuggest(myParam0);
+              showSuggest(myParam1);
             }
         }
     </script>

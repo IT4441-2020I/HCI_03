@@ -31,6 +31,14 @@ const color = "#1f1f1f";
 document.addEventListener('keydown', (event) => {
   const keyNameOrigin = event.key.toLowerCase();
   const keyboardOriginEvent = document.getElementById(keyNameOrigin);
+  const output = document.getElementById("output");
+  const verticalsNotes = document.getElementById("verticals_notes");
+  if (output || verticalsNotes) {
+    if (!output.value || !verticalsNotes.value) {
+      output.value = "";
+      verticalsNotes.value = "";
+    }
+  }
   if (keyNameOrigin && mapKeyboard[keyNameOrigin]) {
     const textAreaOutput = document.getElementById("output");
     const textAreaVerticalsNotes = document.getElementById("verticals_notes");
@@ -73,3 +81,5 @@ document.addEventListener('keyup', (event) => {
     keyboardOriginEvent.classList.remove("transform-active");
   }
 }, false);
+
+
