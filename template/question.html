@@ -227,21 +227,29 @@
 
                         <div style="display: flex; width: 500px;">
                             <div class="ans1" id="a">
-                                <p class="center">-AK</p>
+                                <p class="center" id="pa">-AK</p>
                             </div>
                             <div class="ans1" id="b" style="margin-left: auto;">
-                                <p class="center">-AG</p>
+                                <p class="center" id="pb">-AG</p>
                             </div>
                         </div>
                         <div style="display: flex; width: 500px;">
                             <div class="ans1" id="c">
-                                <p class="center">-AN</p>
+                                <p class="center" id="pc">-AN</p>
                             </div>
                             <div class="ans1" id="d" style="margin-left: auto;">
-                                <p class="center">-AT</p>
+                                <p class="center" id="pd">-AT</p>
                             </div>
                         </div>
-                        <div id='result' style="font-size: 20; margin-top: 20px;"></div>
+                        <div style="display: flex; width: 500px;">
+                            <div id='result' style="font-size: 20; margin-top: 20px;"></div>
+                            <div id="next" style="margin-left: auto; cursor: pointer; visibility: hidden;"><i
+                                    style="font-size: 60; color: #5b47fb;" class="fas fa-long-arrow-alt-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-side" id="res-wrap">
+
                     </div>
                 </div>
             </div>
@@ -263,10 +271,13 @@
     <script src="../js/jquery.cookie.js" type="text/javascript"></script>
 
     <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const id = urlParams.get('id');
-        console.log(id);
+        let urlParams = new URLSearchParams(window.location.search);
+        let id = urlParams.get('id');
+        if (id == null || id < 1 || id > 10) {
+            id = 1;
+        }
         $('#questionNum').html(id);
+
 
         function startTimer(duration, display) {
             var timer = duration, minutes, seconds;
@@ -280,7 +291,7 @@
                 display.text(minutes + ":" + seconds);
 
                 if (--timer < 0) {
-                    timer = duration;
+                    timer = 0;
                 }
             }, 1000);
         }
@@ -292,13 +303,16 @@
         });
 
         let flag = 1;
+        let res = 0;
 
         $('#a').click(function () {
             if (flag == 1) {
                 $('#a').css('background-color', '#27ae60');
                 $('#result').css('color', '#27ae60');
                 $('#result').html('Chính xác');
+                $('#next').css('visibility', 'visible');
                 flag++;
+                res++;
             }
 
         });
@@ -309,29 +323,178 @@
                 $('#a').css('background-color', '#1abc9c');
                 $('#result').css('color', 'red');
                 $('#result').html('Sai rồi');
+                $('#next').css('visibility', 'visible');
                 flag++;
             }
         });
 
         $('#c').click(function () {
             if (flag == 1) {
-                $('#b').css('background-color', '#e74c3c');
+                $('#c').css('background-color', '#e74c3c');
                 $('#a').css('background-color', '#1abc9c');
                 $('#result').css('color', 'red');
                 $('#result').html('Sai rồi');
+                $('#next').css('visibility', 'visible');
                 flag++;
             }
         });
 
         $('#d').click(function () {
             if (flag == 1) {
-                $('#b').css('background-color', '#e74c3c');
+                $('#d').css('background-color', '#e74c3c');
                 $('#a').css('background-color', '#1abc9c');
                 $('#result').css('color', 'red');
                 $('#result').html('Sai rồi');
+                $('#next').css('visibility', 'visible');
                 flag++;
             }
         });
+
+        $('#next').click(function () {
+            id++;
+            if (id == null || id < 1) {
+                id = 1;
+            }
+            if (id <= 10) {
+                $('#questionNum').html(id);
+            }
+            console.log(id);
+            switch (id) {
+                case 2:
+                    $('#question').html("Nhớ");
+                    $('#pa').html("TK-SW");
+                    $('#pb').html("TK-SWT");
+                    $('#pc').html("TK-SWN");
+                    $('#pd').html("TK-ST");
+                    $('#a').css('background-color', '#f3f3f3');
+                    $('#b').css('background-color', '#f3f3f3');
+                    $('#c').css('background-color', '#f3f3f3');
+                    $('#d').css('background-color', '#f3f3f3');
+                    $('#result').html("");
+                    $('#next').css('visibility', 'hidden');
+                    flag = 1;
+                    break;
+                case 3:
+                    $('#question').html("Em");
+                    $('#pa').html("-ET");
+                    $('#pb').html("-EN");
+                    $('#pc').html("-EG");
+                    $('#pd').html("-EK");
+                    $('#a').css('background-color', '#f3f3f3');
+                    $('#b').css('background-color', '#f3f3f3');
+                    $('#c').css('background-color', '#f3f3f3');
+                    $('#d').css('background-color', '#f3f3f3');
+                    $('#result').html("");
+                    $('#next').css('visibility', 'hidden');
+                    flag = 1;
+                    break;
+                case 4:
+                    $('#question').html("Nhanh");
+                    $('#pa').html("-TK-AK");
+                    $('#pb').html("-TK-AT");
+                    $('#pc').html("-TK-AN");
+                    $('#pd').html("-TK-AG");
+                    $('#a').css('background-color', '#f3f3f3');
+                    $('#b').css('background-color', '#f3f3f3');
+                    $('#c').css('background-color', '#f3f3f3');
+                    $('#d').css('background-color', '#f3f3f3');
+                    $('#result').html("");
+                    $('#next').css('visibility', 'hidden');
+                    flag = 1;
+                    break;
+                case 5:
+                    $('#question').html("Nhẹn");
+                    $('#pa').html("TKN-EN");
+                    $('#pb').html("TKN-ET");
+                    $('#pc').html("TKN-E");
+                    $('#pd').html("TKN-EJK");
+                    $('#a').css('background-color', '#f3f3f3');
+                    $('#b').css('background-color', '#f3f3f3');
+                    $('#c').css('background-color', '#f3f3f3');
+                    $('#d').css('background-color', '#f3f3f3');
+                    $('#result').html("");
+                    $('#next').css('visibility', 'hidden');
+                    flag = 1;
+                    break;
+                case 6:
+                    $('#question').html("Chậm");
+                    $('#pa').html("SKN*-WT");
+                    $('#pb').html("SKN*-WN");
+                    $('#pc').html("SKN*-WTK");
+                    $('#pd').html("SKN*-WNT");
+                    $('#a').css('background-color', '#f3f3f3');
+                    $('#b').css('background-color', '#f3f3f3');
+                    $('#c').css('background-color', '#f3f3f3');
+                    $('#d').css('background-color', '#f3f3f3');
+                    $('#result').html("");
+                    $('#next').css('visibility', 'hidden');
+                    flag = 1;
+                    break;
+                case 7:
+                    $('#question').html("Chạp");
+                    $('#pa').html("SKN-ATK");
+                    $('#pb').html("SKN-AJK");
+                    $('#pc').html("SKN-AK");
+                    $('#pd').html("SKN-AG");
+                    $('#a').css('background-color', '#f3f3f3');
+                    $('#b').css('background-color', '#f3f3f3');
+                    $('#c').css('background-color', '#f3f3f3');
+                    $('#d').css('background-color', '#f3f3f3');
+                    $('#result').html("");
+                    $('#next').css('visibility', 'hidden');
+                    flag = 1;
+                    break;
+                case 8:
+                    $('#question').html("Tốt");
+                    $('#pa').html("T-SOWNT");
+                    $('#pb').html("T-SOWT");
+                    $('#pc').html("T-SOWK");
+                    $('#pd').html("T-SOWGN");
+                    $('#a').css('background-color', '#f3f3f3');
+                    $('#b').css('background-color', '#f3f3f3');
+                    $('#c').css('background-color', '#f3f3f3');
+                    $('#d').css('background-color', '#f3f3f3');
+                    $('#result').html("");
+                    $('#next').css('visibility', 'hidden');
+                    flag = 1;
+                    break;
+                case 9:
+                    $('#question').html("Ngoan");
+                    $('#pa').html("KR-UN");
+                    $('#pb').html("KR-UJ");
+                    $('#pc').html("KR-UJK");
+                    $('#pd').html("KR-UJN");
+                    $('#a').css('background-color', '#f3f3f3');
+                    $('#b').css('background-color', '#f3f3f3');
+                    $('#c').css('background-color', '#f3f3f3');
+                    $('#d').css('background-color', '#f3f3f3');
+                    $('#result').html("");
+                    $('#next').css('visibility', 'hidden');
+                    flag = 1;
+                    break;
+                case 10:
+                    $('#question').html("Hay");
+                    $('#pa').html("H-AJN");
+                    $('#pb').html("H-AJG");
+                    $('#pc').html("H-AJK");
+                    $('#pd').html("H-AK");
+                    $('#a').css('background-color', '#f3f3f3');
+                    $('#b').css('background-color', '#f3f3f3');
+                    $('#c').css('background-color', '#f3f3f3');
+                    $('#d').css('background-color', '#f3f3f3');
+                    $('#result').html("");
+                    $('#next').css('visibility', 'hidden');
+                    flag = 1;
+                case 11:
+                    $('#res-wrap').html(`<h4>Bạn đã hoàn thành bài kiểm tra</h4>
+                        <h4>Số câu đúng là <span style="color: #27ae60;">${res}</span>/10</h4>`);
+                    break;
+                default:
+                    $('#res-wrap').html(`<h4>Bạn đã hoàn thành bài kiểm tra</h4>
+                        <h4>Số câu đúng là <span style="color: #27ae60;">${res}</span>/10</h4>`);
+                    break;
+            }
+        })
     </script>
 
 </body>

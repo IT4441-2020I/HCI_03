@@ -73,10 +73,8 @@
 }
 
 .right-side {
-    display: flex;
-    margin-left: 20px;
+    margin-left: -150px;
     padding-left: 20px;
-    border-left: 1px solid #dadcdf;
 }
 
 .badge-size {
